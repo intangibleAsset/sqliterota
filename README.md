@@ -1,6 +1,3 @@
-# sqliterota
-basic rota with sqlite db...incomplete
-
 requirements:
-Django 2.1 or up (works with 2.2 at least)
+pip install django==2.1 <also works with 2.2>
 pip install --upgrade django-crispy-forms
