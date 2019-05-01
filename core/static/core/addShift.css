@@ -1,0 +1,29 @@
+#div_id_staff {
+  padding: 5px;
+  margin: 5px;
+}
+#div_id_startDate {
+  padding: 5px;
+  margin: 5px;
+}
+#div_id_startTime {
+  padding: 5px;
+  margin: 5px;
+}
+#div_id_lengthHours{
+  padding: 5px;
+  margin: 5px;
+}
+#div_id_lengthMinutes{
+  padding: 5px;
+  margin: 5px;
+}
+#col-left{
+  border-style: solid;
+  border-color: rgba(255, 0, 0, 0.5);
+}
+#col-right{
+  border-style: solid;
+  border-color: rgba(255, 0, 0, 0.5);
+  padding: 2px;
+}

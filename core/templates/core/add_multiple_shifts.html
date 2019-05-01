@@ -1,0 +1,34 @@
+{% extends "core/base.html" %}
+
+{% block title %}
+<title>Add multiple shifts</title>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+  <div class="row">
+    <div class="col"></div>
+
+      <div class="col">
+        {% if number %}
+          {{number}}
+          {{staff.firstName}}
+        {% else %}
+        <h3>{{staff.employeeID}} {{staff.firstName}} {{staff.lastName}}</h3>
+        <h3>{{shift}}</h3>
+        <form action="{% url 'Add_multiple'%}" method="post">
+          {% csrf_token %}
+          {{form.as_p}}
+          <input type="hidden" name="pk" value="{{staff.id}}">
+          <input type="submit" value="Submit">
+        </form>
+        {% endif %}
+      </div>
+
+    <div class="col"></div>
+  </div>
+</div>
+
+{% endblock %}

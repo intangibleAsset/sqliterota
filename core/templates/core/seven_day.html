@@ -1,0 +1,33 @@
+{% extends "core/base.html" %}
+
+{% block title %}
+<title>Seven day rota</title>
+{% endblock %}
+
+{% block content %}
+
+<table style="width:100%">
+  <tr>
+    <th>ID</th>
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+    <th>Thursday</th>
+    <th>Friday</th>
+    <th>Saturday</th>
+    <th>Sunday</th>
+  </tr>
+  <tr>
+    <td>{{staff.employeeID}}</td>
+    <td>AM</td>
+    <td>AM</td>
+    <td>PM</td>
+    <td>PM</td>
+    <td>N</td>
+    <td>N</td>
+    <td>O</td>
+  </tr>
+
+</table>
+
+{% endblock %}

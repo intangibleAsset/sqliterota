@@ -1,0 +1,42 @@
+{% extends "core/base.html" %}
+
+{% block title %}
+<title>Staff list</title>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+ <div class="col"></div>
+ <div class="col-8">
+  <table style="width:100%">
+    <tr>
+      <th>Collar number</th>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>E-Mail</th>
+      <th>Add days to rota</th>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    {% for staffMember in staffMembers%}
+    <tr>
+      <td>{{staffMember.employeeID}}</td>
+      <td>{{staffMember.firstName}}</td>
+      <td>{{staffMember.lastName}}</td>
+      <td><a href="mailto:{{staffMember.email}}">{{staffMember.email}}</a></td>
+      <td><a href="/staff_list/{{staffMember.id}}">30 days</a></td>
+    </tr>
+  {% endfor %}
+  </table>
+  </div>
+  <div class="col"></div>
+</div>
+
+{% endblock %}

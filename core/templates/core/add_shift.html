@@ -1,0 +1,57 @@
+{% extends "core/base.html" %}
+
+{% block title %}
+<title>Add Shift</title>
+{% endblock %}
+
+
+
+{% block content %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'core/addShift.css' %}">
+
+
+
+<form method='POST'>
+  {% csrf_token %}
+  <div class="form-row"><!-- outer row -->
+    <div id="col-left" class="form-group col-md-6 mb-0"><!-- first col left side -->
+      <div class="form-row"><!-- inner row left -->
+        <div class="form-group col-md-4 mb-0"><!-- top left col -->
+          {{form.staff | as_crispy_field }}
+        </div>
+        <div class="form-group col-md-4 mb-0"><!-- top middle col -->
+          {{ form.startTime | as_crispy_field }}
+        </div>
+        <div class="form-group col-md-4 mb-0"><!-- top right col -->
+          {{ form.startDate | as_crispy_field }}
+        </div>
+      </div>
+    </div>
+
+    <div id="col-right" class="form-group col-md-6 mb-0"><!-- first col right side -->
+      <div class="form-row"><!-- inner row right -->
+        <div class="form-group col-md-4 mb-0"><!-- top left col -->
+          {{form.lengthHours | as_crispy_field }}
+        </div>
+        <div class="form-group col-md-4 mb-0"><!-- top middle col -->
+          {{form.lengthMinutes | as_crispy_field }}
+        </div>
+        <div class="form-group col-md-4 mb-0"><!-- top right col -->
+          <p>three</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <input type='submit' value="Submit">
+</form>
+
+
+
+
+
+{% endblock %}
